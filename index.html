@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test Page — Deployment Successful</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0a1628;
+    color: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    background: #10203a;
+    border: 1px solid #1e3a5f;
+    border-radius: 12px;
+    padding: 48px 56px;
+    max-width: 560px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+  .status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(6, 182, 212, 0.12);
+    border: 1px solid #06b6d4;
+    color: #06b6d4;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    margin-bottom: 24px;
+  }
+  .dot {
+    width: 8px; height: 8px;
+    background: #06b6d4;
+    border-radius: 50%;
+    animation: pulse 1.6s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-bottom: 12px;
+  }
+  p {
+    font-size: 15px;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .meta {
+    font-size: 13px;
+    color: #64748b;
+    border-top: 1px solid #1e3a5f;
+    padding-top: 20px;
+    margin-top: 8px;
+  }
+  .meta span { color: #b45309; font-family: monospace; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="status"><span class="dot"></span> SERVER ONLINE</div>
+    <h1>It works!</h1>
+    <p>This is a placeholder <code>index.html</code>, useful for confirming that your web server, container, or hosting environment is correctly serving static content.</p>
+    <div class="meta">
+      Served from: <span id="host">this server</span><br>
+      Loaded: <span id="time"></span>
+    </div>
+  </div>
+  <script>
+    document.getElementById('time').textContent = new Date().toLocaleString();
+    document.getElementById('host').textContent = window.location.hostname || 'localhost';
+  </script>
+</body>
+</html>
